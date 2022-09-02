@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/img_registro/registro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form-reg {
+  margin: auto;
+  margin-top: 100px;
+  background-color: #fff;
+  width: 50%;
+  padding: 10px;
+}
+
+.cont-reg {
+  width: 85%;
+  margin: auto;
+}
+
+.cont-reg h2 {
+  text-align: center;
+  text-decoration: double;
+  color: #1a2537;
+  font-size: 30px;
+}
+
+.cont-reg div {
+  display: flex;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #aaa;
+}
+
+.cont-reg div i {
+  width: 5px;
+  margin: auto;
+  text-align: center;
+  color: #999;
+}
+
+.cont-reg div input {
+  width: 85%;
+  font-size: 20px;
+  padding: 15px;
+  border: none;
+}
+
+.form-reg button {
+  border: none;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background-color: #1a2537;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-reg button:hover {
+  background: cadetblue;
+}
+
+.form-reg p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-reg p a {
+  text-decoration: none;
+  color: #1a2537;
+}
+
+/*:::::: disposito mobile registro::::::: */
+@media screen and (max-width: 400px) {
+  .form-reg {
+    margin: auto;
+    margin-top: 50px;
+    width: 400px;
+  }
+}
+
+/*:::::: disposito tablet registro::::::: */
+@media screen and (max-width: 700px) {
+  .form-reg {
+    margin: auto;
+    margin-top: 100px;
+    width: 600px;
+  }
+}

@@ -1,0 +1,112 @@
+// Variables
+$color-title-reg: #1a2537;
+$color-hover: cadetblue;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// contenedor imagen
+body {
+    background-image: url(../img/img_registro/registro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+// formulario
+.form-reg {
+    margin: auto;
+    margin-top: 100px;
+    background-color: #fff;
+    width: 50%;
+    padding: 10px;
+}
+
+// contenedor formulario
+.cont-reg {
+    width: 85%;
+    margin: auto;
+
+    h2 {
+        text-align: center;
+        text-decoration: double;
+        color: $color-title-reg;
+        font-size: 30px;
+    }
+
+    div {
+        display: flex;
+        margin-bottom: 15px;
+        width: 100%;
+        border: 1px solid #aaa;
+
+        i {
+            width: 5px;
+            margin: auto;
+            text-align: center;
+            color: #999;
+        }
+
+        input {
+            width: 85%;
+            font-size: 20px;
+            padding: 15px;
+            border: none;
+        }
+    }
+}
+
+// boton registrarse
+.form-reg {
+    button {
+        border: none;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        background-color: $color-title-reg;
+        padding: 15px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: $color-hover;
+    }
+}
+
+// seccion parrafo y link
+.form-reg {
+    p {
+        margin-top: 10px;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: $color-title-reg;
+        }
+    }
+
+}
+
+
+/*:::::: disposito mobile registro::::::: */
+@media screen and (max-width: 400px) {
+    .form-reg {
+        margin: auto;
+        margin-top: 50px;
+        width: 400px;
+    }
+}
+
+/*:::::: disposito tablet registro::::::: */
+@media screen and (max-width: 700px) {
+    .form-reg {
+        margin: auto;
+        margin-top: 100px;
+        width: 600px;
+    }
+}
