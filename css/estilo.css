@@ -76,7 +76,7 @@ main div img {
   margin-bottom: 25px; }
   .sec-tex div div {
     text-align: center;
-    box-shadow: 12px 14px 15px skyblue;
+    box-shadow: 12px 0px 15px 0px skyblue;
     transition: all 0.3s ease;
     border-style: solid;
     border-color: aliceblue; }

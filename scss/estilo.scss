@@ -1,4 +1,4 @@
-@import "fontscolor";
+@import "./fontscolor";
 
 * {
     margin: 0;
@@ -152,7 +152,7 @@ main {
 
         div {
             text-align: center;
-            box-shadow: 12px 14px 15px skyblue;
+            box-shadow: 12px 0px 15px 0px skyblue;
             transition: all 0.3s ease;
             border-style: solid;
             border-color: aliceblue;
