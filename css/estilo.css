@@ -17,6 +17,8 @@ footer {
   width: 100%; }
 
 .header section {
+  display: flex;
+  justify-content: end;
   background-color: cadetblue;
   border-bottom: 1px solid white; }
   .header section div {
@@ -26,9 +28,7 @@ footer {
       list-style: none;
       padding: 10px 15px 10px 15px; }
       .header section div li a {
-        text-decoration: none;
-        display: flex;
-        justify-items: end; }
+        text-decoration: none; }
         .header section div li a i {
           color: white;
           cursor: pointer; }
@@ -46,9 +46,9 @@ nav {
   nav div button i {
     color: white; }
   nav div div ul .nav-item {
-    margin-left: 50px; }
+    margin-left: 15px; }
     nav div div ul .nav-item .nav-link {
-      font-size: 15px;
+      font-size: 20px;
       color: white; }
     nav div div ul .nav-item .nav-link:hover {
       transition: 0.5s;
@@ -70,19 +70,22 @@ main div img {
   width: 100%;
   height: 800px; }
 
-.sec-tex div {
-  background-color: #ebf1f7;
-  margin-top: 15px;
-  margin-bottom: 25px; }
-  .sec-tex div div {
-    text-align: center;
-    box-shadow: 12px 0px 15px 0px skyblue;
-    transition: all 0.3s ease;
-    border-style: solid;
-    border-color: aliceblue; }
-  .sec-tex div div:hover {
-    transform: scale(0.9);
-    border-radius: 20px; }
+.sec-tex {
+  display: flex;
+  justify-content: center; }
+  .sec-tex div {
+    background-color: #ebf1f7;
+    margin-top: 15px;
+    margin-bottom: 25px; }
+    .sec-tex div div {
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 5px 10px 10px cadetblue;
+      border-style: solid;
+      border-color: aliceblue; }
+    .sec-tex div div:hover {
+      transform: scale(0.9);
+      border-radius: 20px; }
 
 .fa-facebook {
   color: blue; }
@@ -130,7 +133,7 @@ footer {
       color: white; }
     footer div div div {
       display: flex;
-      justify-content: center; }
+      justify-content: flex-start; }
       footer div div div a {
         text-decoration: none;
         font-size: 20px;
@@ -149,33 +152,44 @@ footer {
       color: white;
       font-size: 15px; }
 
-@media only screen and (max-width: 767px) {
-  .body-Pag-Princ footer div div h2 {
-    font-size: 15px;
-    margin-bottom: 5px; } }
+@media (min-width: 425px) {
+  footer .box-1 div h2 {
+    margin-left: 150px; }
+  footer .box-1 div p {
+    margin-left: 150px; }
+  footer .box-1 div li {
+    margin-left: 150px; }
+  footer .box-1 div div {
+    display: flex;
+    justify-content: center; } }
+
+@media (min-width: 768px) {
+  footer .box-1 div h2 {
+    margin-left: 100px; }
+  footer .box-1 div p {
+    margin-left: 100px; }
+  footer .box-1 div li {
+    margin-left: 100px; }
+  footer .box-1 div div {
+    display: flex;
+    justify-content: center; } }
 
 .cont-parf {
-  background-color: #ebf1f7;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 20px; }
-  .cont-parf div div {
-    margin-left: 20px; }
-    .cont-parf div div h2 {
-      font-size: 40px;
-      font-weight: bold;
-      color: #0c0831;
-      text-align: left; }
-    .cont-parf div div h3 {
-      font-size: 30px;
-      font-weight: bold;
-      color: #0c0831;
-      text-align: left; }
-    .cont-parf div div p {
-      text-align: justify; }
+  background-color: #ebf1f7; }
+  .cont-parf div div h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold; }
+  .cont-parf div div h3 {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px; }
   .cont-parf div div img {
-    padding: 10px;
-    border-radius: 20px;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    border-radius: 40px;
     animation-duration: 2s;
     animation-name: aparecer;
     animation-iteration-count: initial; }
@@ -185,6 +199,22 @@ footer {
     opacity: 0; }
   100% {
     opacity: 1; } }
+  .cont-parf div div strong {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px; }
+  .cont-parf .cont-text {
+    display: flex;
+    justify-content: center; }
+    .cont-parf .cont-text div {
+      margin: auto;
+      width: 600px; }
+      .cont-parf .cont-text div p {
+        text-align: justify;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 20px; }
 
 .cont-main div {
   display: flex;
@@ -277,7 +307,13 @@ footer {
     color: #1a2537; }
 
 @media only screen and (max-width: 767px) {
-  .body-reg .form-reg {
+  .form-reg {
     margin: auto;
     margin-top: 100px;
     width: 600px; } }
+
+@media only screen and (min-width: 425px) {
+  .form-reg {
+    margin: auto;
+    margin-top: 50px;
+    width: 400px; } }

@@ -39,19 +39,21 @@ footer {
 //Cabecera
 .header {
     section {
+        display: flex;
+        justify-content: end;
         background-color: $color-pag-cabec;
         border-bottom: 1px solid white;
+
         div {
             display: flex;
             justify-content: end;
+
             li {
                 list-style: none;
                 padding: 10px 15px 10px 15px;
 
                 a {
                     text-decoration: none;
-                    display: flex;
-                    justify-items: end;
 
                     i {
                         color: $color-icon;
@@ -89,10 +91,10 @@ nav {
         div {
             ul {
                 .nav-item {
-                    margin-left: 50px;
+                    margin-left: 15px;
 
                     .nav-link {
-                        font-size: 15px;
+                        font-size: 20px;
                         color: $color-icon;
                     }
 
@@ -137,7 +139,7 @@ nav {
 main {
     div {
         img {
-            @include size(100%, 800px)
+            @include size(100%, 800px);
         }
     }
 }
@@ -145,15 +147,18 @@ main {
 
 // Seccion Texto
 .sec-tex {
+    @include flex-center;
+
     div {
         background-color: #ebf1f7;
         margin-top: 15px;
         margin-bottom: 25px;
 
         div {
+            // margin: 30px 1px 30px 1px;
             text-align: center;
-            box-shadow: 12px 0px 15px 0px skyblue;
             transition: all 0.3s ease;
+            box-shadow: 5px 10px 10px $color-pag-cabec;
             border-style: solid;
             border-color: aliceblue;
         }
@@ -193,7 +198,6 @@ footer {
             figure {
                 @include flex-center;
                 padding: 20px;
-
                 a {
                     img {
                         width: 100%;
@@ -240,7 +244,8 @@ footer {
 
         div {
             div {
-                @include flex-center;
+                display: flex;
+                justify-content: flex-start;
 
                 a {
                     text-decoration: none;
@@ -270,92 +275,83 @@ footer {
     }
 }
 
-
 // Pantallas resposive;
-$vista: movil;
-$vista: tableta;
+@media (min-width: 425px) {
+    footer {
+        .box-1 {
+            div {
+                h2 {
+                    margin-left: 150px;
+                }
 
-.body-Pag-Princ {
-    @if $vista ==tableta {
-        @media only screen and (max-width: 767px) {
-            footer {
+                p {
+                    margin-left: 150px;
+                }
+
+                li {
+                    margin-left: 150px;
+                }
+
                 div {
-                    div {
-                        h2 {
-                            font-size: 15px;
-                            margin-bottom: 5px;
-                        }
+                    @include flex-center;
+                }
+            }
+        }
+    }
+}
 
-                    }
+@media (min-width: 768px) {
+    footer {
+        .box-1 {
+            div {
+                h2 {
+                    margin-left: 100px;
+                }
 
+                p {
+                    margin-left: 100px;
+                }
+
+                li {
+                    margin-left: 100px;
+                }
+
+                div {
+                    @include flex-center;
                 }
             }
         }
     }
 
-    @else if $vista ==movil {
-        @media only screen and (min-width: 425px) {
-            footer {
-                div {
-                    div {
-                        h2 {
-                            margin-left: 100px;
-                            font-size: 30px;
-                            margin-bottom: 5px;
-                        }
-
-                        li {
-                            margin-left: 100px;
-                        }
-                    }
-
-                    div {
-                        p {
-                            margin-left: 100px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @else {}
 }
 
 // :::::::: Pagina Quienes Somos ::::::::
 .cont-parf {
     background-color: #ebf1f7;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 20px;
 
     div {
         div {
-            margin-left: 20px;
-
             h2 {
+                text-align: center;
+                padding: 20px;
                 font-size: 40px;
                 font-weight: bold;
-                color: $color-hover;
-                text-align: left;
             }
 
             h3 {
-                font-size: 30px;
-                font-weight: bold;
-                color: $color-hover;
-                text-align: left;
-            }
-
-            p {
-                text-align: justify;
+                text-align: center;
+                font-size: 20px;
+                padding-bottom: 20px;
             }
         }
+    }
 
+    div {
         div {
             img {
-                padding: 10px;
-                border-radius: 20px;
+                @include size(600px, 300px);
+                margin: auto;
+                border-radius: 40px;
                 animation-duration: 2s;
                 animation-name: aparecer;
                 animation-iteration-count: initial;
@@ -370,9 +366,32 @@ $vista: tableta;
                     opacity: 1;
                 }
             }
+
+            strong {
+                text-align: center;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 10px;
+            }
         }
     }
+
+    .cont-text {
+        @include flex-center;
+        div {
+            margin: auto;
+            width: 600px;
+            p {
+                text-align: justify;
+                margin-bottom: 10px;
+                padding: 5px;
+                font-size: 20px;
+            }
+        }
+    }
+
 }
+
 
 // :::::::: Pagina Productos ::::::::
 .cont-main {
@@ -509,26 +528,19 @@ $vista: tableta;
 }
 
 // Pantallas resposive;
-.body-reg {
-    @if $vista ==tableta {
-        @media only screen and (max-width: 767px) {
-            .form-reg {
-                margin: auto;
-                margin-top: 100px;
-                width: 600px;
-            }
-        }
-    }
 
-    @else if $vista ==movil {
-        @media only screen and (min-width: 425px) {
-            .form-reg {
-                margin: auto;
-                margin-top: 50px;
-                width: 400px;
-            }
-        }
+@media only screen and (max-width: 767px) {
+    .form-reg {
+        margin: auto;
+        margin-top: 100px;
+        width: 600px;
     }
+}
 
-    @else {}
+@media only screen and (min-width: 425px) {
+    .form-reg {
+        margin: auto;
+        margin-top: 50px;
+        width: 400px;
+    }
 }
