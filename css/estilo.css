@@ -66,9 +66,9 @@ nav {
   nav div form button i {
     color: white; }
 
-main div img {
+.carousel div div img {
   width: 100%;
-  height: 800px; }
+  height: 400px; }
 
 .sec-tex {
   display: flex;
@@ -86,6 +86,29 @@ main div img {
     .sec-tex div div:hover {
       transform: scale(0.9);
       border-radius: 20px; }
+
+.categoria {
+  margin-bottom: 40px; }
+  .categoria h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px; }
+  .categoria div div {
+    margin: auto;
+    background-color: #ebf1f7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 5px 10px 10px cadetblue;
+    border-style: solid;
+    border-color: aliceblue; }
+    .categoria div div img {
+      width: 400px;
+      height: 400px; }
+  .categoria div div:hover {
+    transform: scale(0.9);
+    border-radius: 20px; }
 
 .fa-facebook {
   color: blue; }
@@ -152,28 +175,6 @@ footer {
       color: white;
       font-size: 15px; }
 
-@media (min-width: 425px) {
-  footer .box-1 div h2 {
-    margin-left: 150px; }
-  footer .box-1 div p {
-    margin-left: 150px; }
-  footer .box-1 div li {
-    margin-left: 150px; }
-  footer .box-1 div div {
-    display: flex;
-    justify-content: center; } }
-
-@media (min-width: 768px) {
-  footer .box-1 div h2 {
-    margin-left: 100px; }
-  footer .box-1 div p {
-    margin-left: 100px; }
-  footer .box-1 div li {
-    margin-left: 100px; }
-  footer .box-1 div div {
-    display: flex;
-    justify-content: center; } }
-
 .cont-parf {
   background-color: #ebf1f7; }
   .cont-parf div div h2 {
@@ -216,23 +217,40 @@ footer {
         padding: 5px;
         font-size: 20px; }
 
-.cont-main div {
+.cont-prod div {
   display: flex;
   justify-content: center; }
-  .cont-main div .card {
+  .cont-prod div .card {
     margin: 20px;
     box-shadow: 12px 14px 15px skyblue;
     transition: all 0.3s ease;
     border-style: solid;
     border-color: aliceblue; }
-    .cont-main div .card div {
+    .cont-prod div .card div img {
+      margin: auto;
+      width: 300px;
+      height: 270px; }
+    .cont-prod div .card div {
       display: flex;
       flex-direction: column; }
-      .cont-main div .card div p {
+      .cont-prod div .card div p {
         text-align: center; }
-      .cont-main div .card div strong {
+      .cont-prod div .card div p strong {
         text-align: center; }
-  .cont-main div .card:hover {
+      .cont-prod div .card div div {
+        width: 100px;
+        margin: auto;
+        box-shadow: 12px 14px 15px skyblue;
+        transition: all 0.3s ease;
+        border-style: solid;
+        border-color: aliceblue; }
+        .cont-prod div .card div div a {
+          text-transform: uppercase;
+          font-size: 14px; }
+      .cont-prod div .card div div:hover {
+        transform: scale(0.9);
+        border-radius: 20px; }
+  .cont-prod div .card:hover {
     transform: scale(0.9);
     border-radius: 20px; }
 
@@ -248,6 +266,52 @@ footer {
     transition: all 0.3s ease;
     border-style: solid;
     border-color: aliceblue; }
+
+@media only screen and (max-width: 768px) {
+  .categoria div div {
+    width: 300px;
+    margin: auto;
+    padding-bottom: 20px; }
+    .categoria div div img {
+      width: 200px;
+      height: 300px; }
+  .cont-prod div .card div img {
+    margin: auto;
+    width: 200px;
+    height: 200px; }
+  footer .box-1 div h2 {
+    margin-left: 100px; }
+  footer .box-1 div p {
+    margin-left: 100px; }
+  footer .box-1 div li {
+    margin-left: 100px; }
+  footer .box-1 div div {
+    display: flex;
+    justify-content: center; } }
+
+@media only screen and (min-width: 425px) {
+  .categoria div div {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 30px; }
+    .categoria div div img {
+      width: 300px;
+      height: 300px; }
+  .cont-prod div .card {
+    width: 300px; }
+    .cont-prod div .card div img {
+      margin: auto;
+      width: 250px;
+      height: 200px; }
+  footer .box-1 div h2 {
+    margin-left: 150px; }
+  footer .box-1 div p {
+    margin-left: 150px; }
+  footer .box-1 div li {
+    margin-left: 150px; }
+  footer .box-1 div div {
+    display: flex;
+    justify-content: center; } }
 
 .body-reg {
   background-image: url(../assets/img/img_registro/registro.jpg);

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprá productos de Librería y Mercería - Yunino. Tenemos mercería, puntillas y más. Hacé tu pedido y pagalo online.">
+    <meta name="description"
+        content="Comprá productos de Librería y Mercería - Yunino. Tenemos mercería, puntillas y más. Hacé tu pedido y pagalo online.">
     <meta name="keywords" content="Librería. Papelería Comercial y Artículos Escolares. Regalería.">
     <script src="https://kit.fontawesome.com/09746e0614.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./assets/img/favicon/favicon.png" type="image/png">
@@ -87,30 +88,29 @@
     <!-- Pagina Principal-->
     <main>
         <!--::::: Carrusel :::::-->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2">
-                </button>
-            </div>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./assets/img/img_pag_princ/imgPagPrinc.png" class="d-block imagen" alt="imgPagMerceria">
+                    <img src="./assets/img/img_pag_princ/carrusel/img-school.jpg" class="d-block w-100"
+                        alt="Imagen de volviendo a clases">
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/img/img_pag_princ/imgPagPrinc2.png" class="d-block imagen" alt="imgPagLibreria">
+                    <img src="./assets/img/img_pag_princ/carrusel/img-libreria.jpg" class="d-block w-100"
+                        alt="Imagen de Libreria">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/img_pag_princ/carrusel/img-merceria.jpg" class="d-block w-100"
+                        alt="Imagen de Merceria">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon btn" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon btn" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
@@ -139,7 +139,31 @@
                 </div>
             </div>
         </section>
+
+        <!--:::::: categoria ::::::-->
+        <section class="container categoria">
+            <h2>Elige tu Categoria...</h2>
+
+            <div class="container-fluid row row-cols-1 m-0">
+                <div class="col">
+                    <a href="./pags/productos.html">
+                        <img class="img-fluid" src="./assets/img/img_pag_princ/secciones/libreria.png"
+                            alt="Imagen de Libreria">
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="./pags/productos.html">
+                        <img class="img-fluid" src="./assets/img/img_pag_princ/secciones/merceria.png"
+                            alt="Imagen de Merceria">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--::::: Carrusel Novedades:::::-->
     </main>
+
 
     <!-- Pie de Pagina -->
     <footer>
@@ -147,7 +171,8 @@
             <div class="div-1 col">
                 <figure>
                     <a href="#">
-                        <img src="./assets/img/img_logo/Logo.jpg" alt="Logo Empresa" style="width: 100px; height: 100px;">
+                        <img src="./assets/img/img_logo/Logo.jpg" alt="Logo Empresa"
+                            style="width: 100px; height: 100px;">
                     </a>
                 </figure>
             </div>
@@ -190,7 +215,7 @@
             </div>
         </div>
 
-        <div class="box-2 row autor">
+        <div class="box-2 row autor m-0">
             <div class="col">
                 <small>&copy; 2022 <b>Yunino</b> - Todos los Derechos Reservados.</small>
             </div>

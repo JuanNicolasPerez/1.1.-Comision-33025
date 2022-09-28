@@ -35,18 +35,21 @@ footer {
     justify-content: center;
 }
 
+@mixin flex-end {
+    display: flex;
+    justify-content: end;
+}
+
 //:::::::: Pagina Principal ::::::::
 //Cabecera
 .header {
     section {
-        display: flex;
-        justify-content: end;
+        @include flex-end;
         background-color: $color-pag-cabec;
         border-bottom: 1px solid white;
 
         div {
-            display: flex;
-            justify-content: end;
+            @include flex-end;
 
             li {
                 list-style: none;
@@ -136,14 +139,15 @@ nav {
 }
 
 // Seccion Carrucel
-main {
+.carousel {
     div {
-        img {
-            @include size(100%, 800px);
+        div {
+            img {
+                @include size(100%, 400px);
+            }
         }
     }
 }
-
 
 // Seccion Texto
 .sec-tex {
@@ -155,7 +159,6 @@ main {
         margin-bottom: 25px;
 
         div {
-            // margin: 30px 1px 30px 1px;
             text-align: center;
             transition: all 0.3s ease;
             box-shadow: 5px 10px 10px $color-pag-cabec;
@@ -168,7 +171,40 @@ main {
             border-radius: 20px;
         }
     }
+}
 
+// Seccion Categoria
+.categoria {
+    margin-bottom: 40px;
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    div {
+        div {
+            margin: auto;
+            background-color: #ebf1f7;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 5px 10px 10px $color-pag-cabec;
+            border-style: solid;
+            border-color: aliceblue;
+
+            img {
+                @include size(400px, 400px);
+            }
+        }
+
+        div:hover {
+            transform: scale(0.9);
+            border-radius: 20px;
+        }
+    }
 }
 
 
@@ -198,6 +234,7 @@ footer {
             figure {
                 @include flex-center;
                 padding: 20px;
+
                 a {
                     img {
                         width: 100%;
@@ -275,56 +312,6 @@ footer {
     }
 }
 
-// Pantallas resposive;
-@media (min-width: 425px) {
-    footer {
-        .box-1 {
-            div {
-                h2 {
-                    margin-left: 150px;
-                }
-
-                p {
-                    margin-left: 150px;
-                }
-
-                li {
-                    margin-left: 150px;
-                }
-
-                div {
-                    @include flex-center;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    footer {
-        .box-1 {
-            div {
-                h2 {
-                    margin-left: 100px;
-                }
-
-                p {
-                    margin-left: 100px;
-                }
-
-                li {
-                    margin-left: 100px;
-                }
-
-                div {
-                    @include flex-center;
-                }
-            }
-        }
-    }
-
-}
-
 // :::::::: Pagina Quienes Somos ::::::::
 .cont-parf {
     background-color: #ebf1f7;
@@ -378,9 +365,11 @@ footer {
 
     .cont-text {
         @include flex-center;
+
         div {
             margin: auto;
             width: 600px;
+
             p {
                 text-align: justify;
                 margin-bottom: 10px;
@@ -394,7 +383,7 @@ footer {
 
 
 // :::::::: Pagina Productos ::::::::
-.cont-main {
+.cont-prod {
     div {
         @include flex-center;
 
@@ -406,6 +395,13 @@ footer {
             border-color: aliceblue;
 
             div {
+                img {
+                    margin: auto;
+                    @include size(300px, 270px);
+                }
+            }
+
+            div {
                 display: flex;
                 flex-direction: column;
 
@@ -413,8 +409,28 @@ footer {
                     text-align: center;
                 }
 
-                strong {
-                    text-align: center;
+                p {
+                    strong {
+                        text-align: center;
+                    }
+                }
+
+                div {
+                    width: 100px;
+                    margin: auto;
+                    box-shadow: 12px 14px 15px skyblue;
+                    transition: all 0.3s ease;
+                    border-style: solid;
+                    border-color: aliceblue;
+                    a{
+                        text-transform: uppercase;
+                        font-size: 14px;
+                    }
+                }
+                
+                div:hover {
+                    transform: scale(0.9);
+                    border-radius: 20px;
                 }
             }
         }
@@ -440,6 +456,120 @@ footer {
             transition: all 0.3s ease;
             border-style: solid;
             border-color: aliceblue;
+        }
+    }
+}
+
+// Pantallas resposive;
+@media only screen and (max-width: 768px) {
+
+    // Seccion Categoria
+    .categoria {
+        div {
+            div {
+                width: 300px;
+                margin: auto;
+                padding-bottom: 20px;
+
+                img {
+                    @include size(200px, 300px);
+                }
+            }
+        }
+    }
+
+    // Pagina Productos
+    .cont-prod {
+        div {
+            .card {
+                div {
+                    img {
+                        margin: auto;
+                        @include size(200px, 200px);
+                    }
+                }
+            }
+        }
+    }
+
+    // Seccion Pie de Pagina
+    footer {
+        .box-1 {
+            div {
+                h2 {
+                    margin-left: 100px;
+                }
+
+                p {
+                    margin-left: 100px;
+                }
+
+                li {
+                    margin-left: 100px;
+                }
+
+                div {
+                    @include flex-center;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 425px) {
+
+    // Seccion Categoria
+    .categoria {
+        div {
+            div {
+                width: 300px;
+                margin: auto;
+                margin-bottom: 30px;
+
+                img {
+                    @include size(300px, 300px);
+                }
+            }
+        }
+    }
+
+    // Pagina Productos
+    .cont-prod {
+        div {
+            .card {
+                width: 300px;
+
+                div {
+                    img {
+                        margin: auto;
+                        @include size(250px, 200px);
+                    }
+                }
+            }
+        }
+    }
+
+    // Seccion Pie de Pagina
+    footer {
+        .box-1 {
+            div {
+                h2 {
+                    margin-left: 150px;
+                }
+
+                p {
+                    margin-left: 150px;
+                }
+
+                li {
+                    margin-left: 150px;
+                }
+
+                div {
+                    @include flex-center;
+                }
+            }
         }
     }
 }
